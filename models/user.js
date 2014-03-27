@@ -10,8 +10,7 @@ var OAuthUsersSchema = new Schema({
   password_reset_token: { type: String, unique: true },
   reset_token_expires: Date,
   firstname: String,
-  lastname: String,
-  papers_library_id: { type: String, required: true }
+  lastname: String
 });
 
 function hashPassword(password) {
