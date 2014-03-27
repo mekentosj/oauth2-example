@@ -1,0 +1,7 @@
+{
+  "db": "localhost/oauth-example",
+  "emailer": {
+    "from": "support@papers.example.com"
+  },
+  "rootURL": "http://localhost:3000"
+}
