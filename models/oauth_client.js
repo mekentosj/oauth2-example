@@ -9,9 +9,9 @@ var OAuthClientsSchema = new Schema({
 });
 
 OAuthClientsSchema.static('getClient', function(clientId, clientSecret, callback) {
-  var params = {clientId: clientId};
-  if(clientSecret!=null) {
-      params.clientSecret = clientSecret;
+  var params = { clientId: clientId };
+  if (clientSecret != null) {
+    params.clientSecret = clientSecret;
   }
   OAuthClientsModel.findOne(params, callback);
 });

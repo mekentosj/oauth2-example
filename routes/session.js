@@ -6,7 +6,7 @@ module.exports.create = function(req, res, next) {
 
     if (user) {
       req.session.userId = user.email;
-      var redirect = (req.query.redirect!=null ? req.query.redirect : '/account');
+      var redirect = (req.query.redirect != null ? req.query.redirect : '/account');
       res.redirect(redirect);
     } else {
       res.status(401).render('login');
