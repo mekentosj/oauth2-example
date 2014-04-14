@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .container
+    form.form-signin(method='post', action='', role='form')
+      h2.form-signin-heading Authorise
+      .form-group
+        .div You authorise access to you account 
+      .form-group
+        input(type='hidden', name='allow', value='yes')
+        input(type='hidden', name='client_id', value='#{client_id}')
+        input(type='hidden', name='redirect_uri', value='#{redirect_uri}')
+        input(type='hidden', name='response_type', value='code')
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Authorise

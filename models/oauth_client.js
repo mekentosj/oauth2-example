@@ -9,7 +9,11 @@ var OAuthClientsSchema = new Schema({
 });
 
 OAuthClientsSchema.static('getClient', function(clientId, clientSecret, callback) {
-  OAuthClientsModel.findOne({ clientId: clientId, clientSecret: clientSecret }, callback);
+  var params = {clientId: clientId};
+  if(clientSecret!=null) {
+      params.clientSecret = clientSecret;
+  }
+  OAuthClientsModel.findOne(params, callback);
 });
 
 OAuthClientsSchema.static('grantTypeAllowed', function(clientId, grantType, callback) {
