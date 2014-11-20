@@ -18,5 +18,6 @@
     "mocha": "^1.17.1",
     "nodemon": "^1.0.15",
     "should": "^3.3.0"
-  }
+  },
+  "license": "MIT"
 }
